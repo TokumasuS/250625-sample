@@ -6,70 +6,218 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="このサイトは一人でもハワイ観光楽しめるようにプランや食べ物やスポットをおすすめするサイトです。" />
-    <title>sample</title>
+    <title>SOLOTRIP...</title>
     <link rel="stylesheet" href="./css/style.css" /> <!-- コピペすると便利 -->
-    <link rel="stylesheet" href="./css/mq.css" /> <!-- コピペすると便利 -->
     <script></script> <!--  javascriptを作成 -->
 </head>
 
+<header>
+    <div class=title>
+        <h1>
+            <a href="index.html">#SOLOTRIP...</a>
+        </h1>
+    </div>
+        <div class="modal-container-bug">
+        
+        <label for="modal-toggle" class="modal-button" style="cursor: pointer;"><img src="img/BAG.svg"></label>
+        <input type="checkbox" id="modal-toggle">
+
+        <div class="modal">
+            <div class="modal-content">
+                <label for="modal-toggle" class="close">&times;</label>
+                <h2>LIST</h2>
+                <p>これはCSSのみで作成されたモーダルウィンドウの例です。</p>
+            </div>
+        </div>
+    </div>
+</header>
+
 <body>
 
-    <div class="container">
-        <header>
-            <h1>SITE TITLE</h1>
-        </header>
 
-        <main>
-            <section class="hero-section">
-                <div class="grid-1">
-                    <h1>キャッチコピーかな</h1>
-                </div>
-
-                <div class="grid-2">
-                    <p>この文章はダミーです。この文章はダミーです。この文章はダミーです。
-                        この文章はダミーです。この文章はダミーです。</p>
-                </div>
-
-                <div class="grid-3">
-                    <img src="./img/item.jpg" alt="ペンが机に置かれている写真">
-                    <!-- 上の「alt=""」は画像の説明。スクリーンなんたらっていうときに便利> -->
-                </div>
-            </section>
-
-            <section class="item-section">
-                <h2>新着アイテム</h2>
-                <div class="grid-4">
-
-                    <article class="item-1">
-                        <h3>NEW ITEM 1</h3>
-                        <img src="./img/item.jpg" alt="ペンが机に置かれている写真">
-                    </article>
-
-                    <article class="item-2">
-                        <h3>NEW ITEM 2</h3>
-                        <img src="./img/item.jpg" alt="ペンが机に置かれている写真">
-                    </article>
-
-                    <article class="item-3">
-                        <h3>NEW ITEM 3</h3>
-                        <img src="./img/item.jpg" alt="ペンが机に置かれている写真">
-                    </article>
-
-                    <article class="item-4">
-                        <h3>NEW ITEM 4</h3>
-                        <img src="./img/item.jpg" alt="ペンが机に置かれている写真">
-                    </article>
-                </div>
-            </section>
-        </main>
-
-        <footer>
-            <h1>footer</h1>
-            <p><small>&copy; 2025 SITE
-                    TITLE</small></p>
-        </footer>
-
+    <div class="first-img"><img src='img/mainimg.jpg'>
     </div>
+    <ul>
+        <li><a href="index.html">トップ</a></li>
+        <li><a href="recommend.html">おすすめ</a></li>
+        <li><a href="ready.html">安全＆準備</a></li>
+    </ul>
+
+
+    <main>
+        <section class="massage-section">
+            <div class="text">一人で海外旅行に行くのは厳しい...
+                だけど行ってみたい！
+                そんな人に安心してハワイ旅行を楽しめるガイドサイトです。</div>
+            </p>
+        </section>
+
+        <section class="button-section">
+            <div class="style-button-spot">
+                <p>SPOT</p>
+            </div>
+            <div class="style-button-food">
+                <p>FOOD</P>
+            </div>
+
+            <div class="style-button-gift">
+                <p>GIFT</P>
+            </div>
+
+        </section>
+
+        <!--おすすめスライド-->
+        <section class="TOP_recommend-section">
+
+            <input type="radio" id="slide1" name="carousel" checked>
+            <input type="radio" id="slide2" name="carouse2">
+            <input type="radio" id="slide3" name="carouse3">
+
+
+            <div class="carousel">
+
+                <!--ひとつめ-->
+                <div class="carousel-item">
+
+                    <div class="img">
+                        <img src="./img/imge1.png" alt="Slide 1">
+                    </div>
+
+
+                    <div class="recommend-right">
+
+                        <div class="recommend-title">
+                            <h2>TITLE</h2>
+                        </div>
+
+                        <div class="category-icon">
+                            <img src="img/food.svg">
+                            <img src="img/spot.svg">
+                            <img src="img/gift.svg">
+                        </div>
+
+                        <div class="genre">
+                            <img src="img/heart.svg">
+                            <img src="img/photo.svg">
+                            <img src="img/activity.svg">
+                            <img src="img/culture.svg">
+                            <img src="img/japan.svg">
+                        </div>
+
+                        <div class="recommend-text">
+                            <p>ダミーテキストです。ダミーテキストです。
+                                ダミーテキストです。 ダミーテキストです。
+                                ダミーテキストです。 ダミーテキストです。
+                            </p>
+                        </div>
+
+                        <div class="detail-button">
+                            <p>詳しく</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!--ふたつめ-->
+                <div class="carousel-item">
+
+                    <div class="img">
+                        <img src="./img/imge2.png" alt="Slide 2">
+                    </div>
+
+
+                    <div class="recommend-right">
+
+                        <div class="recommend-title">
+                            <h2>TITLE</h2>
+                        </div>
+
+                        <div class="category-icon">
+                            <img src="img/food.svg">
+                            <img src="img/spot.svg">
+                            <img src="img/gift.svg">
+                        </div>
+
+                        <div class="genre">
+                            <img src="img/heart.svg">
+                            <img src="img/photo.svg">
+                            <img src="img/activity.svg">
+                            <img src="img/culture.svg">
+                            <img src="img/japan.svg">
+                        </div>
+
+                        <div class="recommend-text">
+                            <p>ダミーテキストです。ダミーテキストです。
+                                ダミーテキストです。 ダミーテキストです。
+                                ダミーテキストです。 ダミーテキストです。
+                            </p>
+                        </div>
+
+                        <div class="detail-button">
+                            <p>詳しく</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!--みっつめ-->
+                <div class="carousel-item">
+
+                    <div class="img">
+                        <img src="./img/imge3.png" alt="Slide 3">
+                    </div>
+
+
+                    <div class="recommend-right">
+
+                        <div class="recommend-title">
+                            <h2>TITLE</h2>
+                        </div>
+
+                        <div class="category-icon">
+                            <img src="img/food.svg">
+                            <img src="img/spot.svg">
+                            <img src="img/gift.svg">
+                        </div>
+
+                        <div class="genre">
+                            <img src="img/heart.svg">
+                            <img src="img/photo.svg">
+                            <img src="img/activity.svg">
+                            <img src="img/culture.svg">
+                            <img src="img/japan.svg">
+                        </div>
+
+                        <div class="recommend-text">
+                            <p>ダミーテキストです。ダミーテキストです。
+                                ダミーテキストです。 ダミーテキストです。
+                                ダミーテキストです。 ダミーテキストです。
+                            </p>
+                        </div>
+
+                        <div class="detail-button">
+                            <p>詳しく</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-nav">
+                    <label for="slide1"></label>
+                    <label for="slide2"></label>
+                    <label for="slide3"></label>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <footer>
+        <div class="fotter-menu">
+            <ul>
+                <li><a href="index.html">トップ</a></li>
+                <li><a href="index.html">おすすめ</a></li>
+                <li><a href="index.html">安全＆注意</a></li>
+            </ul>
+    </footer>
+
 </body>
 
 </html>

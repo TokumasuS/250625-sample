@@ -1,5 +1,8 @@
 @charset "UTF-8";
 
+@import url('https://fonts.googleapis.com/css2?family=Limelight&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Kiwi+Maru&display=swap');
 * {
     margin: 0;
     padding: 0;
@@ -10,91 +13,300 @@
     list-style: none;
 }
 
+:root {
+    /* カラーに名前をつける */
+    --main-color: #135589;
+    --secondary-color: #ADD9DA;
+    --bg-color-rgba: #F8FCFF;
+    --text-color: #000;
+    --accent-color: #FFF;
+}
+
 html {
-    font-size: 62.5%;
+    font-size: 75%;
     /* 基準の値 */
+    letter-spacing: 0.12em;
+
+    
 }
 
-body {}
-
-.container {
-    display: grid;
-    /* 三列のレイアウトにする */
-    grid-template-columns: repeat(3, 1fr);
-    /* 行の高さはコンテンツに合わせて調整 */
-    grid-template-rows: auto;
-    row-gap: 16px;
-    column-gap: 16px;
-    margin: 5%;
+a{
+ color: #000;
+ text-decoration: none;
 }
 
-header {
-    /* １列目から最終列までのコンテナの全幅 */
-    grid-column: 1 / -1;
-    grid-row: 1;
-}
 
-main {
-    /* １列目から最終列までのコンテナの全幅 */
-    grid-column: 1 / -1;
-    /* 子要素を縦に並べるためにflexを利用する */
+header{
+    font-family:  "Limelight", sans-serif;
     display: flex;
-    flex-direction: column;
-    gap: 16px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.hero-section {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 16px;
-}
-
-.hero-section .grid-1 {
-    grid-column: 1/2;
-    grid-row: 1;
-    font-size: 1.8rem;
+.first-img{
     display: flex;
-    align-items: flex-end;
+    width: 100vw;
+    height: 300px;
 }
 
-/* テキスト */
-.hero-section .grid-2 {
-    grid-column: 2 / -1;
-    grid-row: 1 /3;
-    /*二行目*/
-}
-
-/* 画像 */
- .hero-section .grid-3 {
-    grid-column: 2 /-1;
-    grid-row: 1 / 3;
+.first-img img{
+width: 100%;
+object-fit: cover;
 } 
 
-.hero-section .grid-3 img {
-    width: 100%;
+.title{
+    padding-left: 30px;
+    font-size: 2.0em;
+}
+
+/* モーダル */
+.modal-container-bug{
+    padding-right: 50px;
+    align-content: start;
+}
+
+.modal-button:hover {
+    opacity: 0.2;
+}
+
+.modal-content {
+    position: relative;
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* チェックボックスでモーダルの表示を制御 */
+#modal-toggle {
+    display: none;
+}
+
+#modal-toggle:checked+.modal {
+    display: block;
+}
+
+/* ここまでモーダル */
+
+body{
+    background-color: var(--bg-color-rgba);
+    font-family: "Kiwi Maru", serif;
+}
+
+ul{
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+    padding-left: 400px;
+    padding-right: 400px;
+    height: 30px;
+    font-size: 1.5em;;
+}
+main{
+
+  font-weight: 400;
+  font-style: normal;
+
+}
+
+.massage-section{
+    display: flex;
+    justify-content: center;
+
+}
+
+.text{
+    display: flex;
+    
+}
+
+.button-section{
+ display: flex;
+ padding: 30px;
+ display: -webkit-flex;
+ justify-content: space-around;
+}
+
+.style-button-spot{
+border-radius: 50%;
+display: flex;
+justify-content:center;
+align-items: center;
+width:  calc(90% / 2);
+background: var(--secondary-color);
+color: #000;
+text-decoration: none;
+text-align: center;
+}
+
+.style-button-food{
+border-radius: 50%;
+display: flex;
+justify-content:center;
+align-items: center;
+width:  calc(90% / 2);
+background: var(--secondary-color);
+color: #000;
+text-decoration: none;
+text-align: center;
+    }
+
+    .style-button-gift{
+border-radius: 50%;
+display: flex;
+justify-content:center;
+align-items: center;
+width:  calc(90% / 2);
+background: var(--secondary-color);
+color: #000;
+text-decoration: none;
+text-align: center;
+        }
+
+.TOP_recommend-section{
+    display: flex;
+    width: 1059.679px;
+height: 591.112px;
+flex-shrink: 0;
+
+}
+
+/* スライドショー */
+
+.carousel{
+    width: 1059.679px;
+height: 591.112px;
+flex-shrink: 0;
+}
+
+
+.carousel-container {
+    display: flex;
+    position: relative;
+    justify-content: center;
+}
+
+.carousel {
+    display: flex;
     height: 100%;
-    object-fit: cover;
+    /* ブラウザいっぱいに広がる */
+    transition: transform 0.5s ease;
+    /* スライドのアニメーション */
 }
 
-.item-section {
-    grid-column: 1 / -1;
+.carousel-item {
+    flex: 0 0 100%;
+    /* 各スライドの幅 */
+    overflow: hidden; 
+    /* オーバーフローを隠す */
+     position: relative;
+    /* 相対位置 */
 }
 
-.item-section>div {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    /* 各アイテムが300px以上のスペースを確保しつつ、
-    可能な限り横に並ぶようにする。 */
-    gap: 16px;
-}
-
-.item-section article img {
+.carousel-item img {
     width: 100%;
-     height: 100%;
-    object-fit: cover;
+    /* 画像を親要素に合わせる */
+     height: 100%; 
+    /* 画像を親要素に合わせる */
+     object-fit: cover; 
+    /* 画像をカバー表示 */
+    vertical-align: middle;
+    /* 画像を垂直方向に中央揃え */
 }
 
-footer {
-    /* １列目から最終列までのコンテナの全幅 */
-    grid-column: 1 / -1;
+.carousel-nav {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+}
+
+.carousel-nav label {
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#slide1:checked~.carousel .carousel-item {
+    transform: translateX(0);
+    /* 1枚目のスライド */
+}
+
+#slide2:checked~.carousel .carousel-item {
+    transform: translateX(-100%);
+    /* 2枚目のスライド */
+}
+
+#slide3:checked~.carousel .carousel-item {
+    transform: translateX(-200%);
+    /* 3枚目のスライド */
+}
+
+.recommend-right{
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+gap: 29px;
+
+}
+
+.category-icon{
+    display: flex;
+padding: 0px 5px;
+flex-direction: column;
+align-items: center;
+gap: 16px;
+align-self: stretch;
+}
+
+.genre{
+    display: flex;
+flex-direction: column;
+align-items: center; 
+justify-content: space-between; 
+gap: 4px;
+}
+
+
+.genre img img {
+    width: 24px;
+    height: 24px; 
+}
+
+footer{
+display: flex;
+flex-shrink: 0;
+background: var(--main-color);
+margin-bottom: 50px;
+
+}
+
+.fotter-menu{
+    padding: 30px;
+
 }

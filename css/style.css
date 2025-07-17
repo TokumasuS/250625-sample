@@ -192,17 +192,14 @@ flex-shrink: 0;
 
 /* スライドショー */
 
-.carousel{
-    width: 1059.679px;
-height: 591.112px;
-flex-shrink: 0;
-}
-
-
 .carousel-container {
-    display: flex;
     position: relative;
-    justify-content: center;
+    width: 100vw;
+    /* ブラウザいっぱいに広がる */
+    height: 50vh;
+    /* ブラウザの高さ半分に広がる */
+    overflow: hidden;
+    /* オーバーフローを隠す */
 }
 
 .carousel {
@@ -216,22 +213,55 @@ flex-shrink: 0;
 .carousel-item {
     flex: 0 0 100%;
     /* 各スライドの幅 */
-    overflow: hidden; 
+    overflow: hidden;
     /* オーバーフローを隠す */
-     position: relative;
+    position: relative;
     /* 相対位置 */
+    padding: 15px;
+    justify-content: center;
 }
 
 .carousel-item img {
     width: 100%;
     /* 画像を親要素に合わせる */
-     height: 100%; 
+    height: 100%;
     /* 画像を親要素に合わせる */
-     object-fit: cover; 
+    object-fit: cover;
     /* 画像をカバー表示 */
     vertical-align: middle;
     /* 画像を垂直方向に中央揃え */
+    padding: 15px;
 }
+
+
+.carousel-img{
+    justify-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.carousel-img img{
+    display: flex;
+    width:25%;
+}
+
+.carousel-synopsis{
+    display: flex;
+}
+
+.carousel-icon{
+    justify-items: baseline;
+}
+
+
+.carousel-title{
+    display: flex;
+}
+
+
+
+
+
 
 .carousel-nav {
     position: absolute;
@@ -246,7 +276,7 @@ flex-shrink: 0;
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(0, 50, 150, 0.5);
     margin: 0 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
@@ -267,35 +297,9 @@ flex-shrink: 0;
     /* 3枚目のスライド */
 }
 
-.recommend-right{
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-gap: 29px;
-
-}
-
-.category-icon{
-    display: flex;
-padding: 0px 5px;
-flex-direction: column;
-align-items: center;
-gap: 16px;
-align-self: stretch;
-}
-
-.genre{
-    display: flex;
-flex-direction: column;
-align-items: center; 
-justify-content: space-between; 
-gap: 4px;
-}
-
-
-.genre img img {
-    width: 24px;
-    height: 24px; 
+/* ラジオボタンを非表示にする */
+input[type="radio"] {
+    display: none;
 }
 
 footer{
